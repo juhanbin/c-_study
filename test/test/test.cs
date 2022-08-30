@@ -20,7 +20,22 @@ namespace CSharp
             //16잔수
             //0~9 a b c d e f
                 //0x00 0x01 0x02 ... 0x0F
+
+            //1바이트(참/거짓)
+            bool b;
+            b = true;
+            b = false;
             
+            //소수
+            //4바이트
+            float f=3.14f;
+            //8바이트
+            double d=3.14;
+
+            //2바이트
+            char c='a';
+            string str="Hello World!";
+            Console.WriteLine(str);
             //Console.WriteLine("Hello Number! {0}",attack);
         }
     }
