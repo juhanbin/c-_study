@@ -6,20 +6,16 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            var num = 3;
-            var num2 = "Hello World";
-            
-            int a = 3 + 2 * 3;
-            //1.    ++  --
-            //2.    *   /   %
-            //3.    +   -
-            //4.    <<  >>
-            //5.    <   >
-            //6.    ==  !=
-            //7.    &
-            //8.    ^
-            //9.    |
-            //      ...
+            int choice = 0; //0:가위   1:바위    2:보     3.치트키
+
+            if (choice == 0)
+                Console.WriteLine("가위입니다");
+            else if (choice == 1)
+                Console.WriteLine("바위입니다");
+            else if (choice == 2)
+                Console.WriteLine("보입니다");
+            else
+                Console.WriteLine("치트키입니다");
         }
     }
 }
