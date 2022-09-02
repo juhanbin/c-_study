@@ -6,16 +6,20 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            int id = 123;
-            int key = 401;
-
-            int a = id ^ key;
-            int b = a ^ key;
-
-            // <<   >>    &(and)  |(or)    &(xor)   ~(not)
+            var num = 3;
+            var num2 = "Hello World";
             
-            Console.WriteLine(a);
-            Console.WriteLine(b);
+            int a = 3 + 2 * 3;
+            //1.    ++  --
+            //2.    *   /   %
+            //3.    +   -
+            //4.    <<  >>
+            //5.    <   >
+            //6.    ==  !=
+            //7.    &
+            //8.    ^
+            //9.    |
+            //      ...
         }
     }
 }
