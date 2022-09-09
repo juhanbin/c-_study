@@ -6,17 +6,12 @@ namespace CSharp
     {
         static void Main(string[] args)
         {
-            int count = 0;
-
-            while (count < 5)
+            for (int i = 1; i <= 100; i++)
             {
-                Console.WriteLine("hello world");
-                count++;
-            }
-
-            for (int i = 0; i < 5; i++)
-            {
-                Console.WriteLine("hello world");
+                if (i % 3 != 0)
+                    continue;
+                
+                Console.WriteLine($"3으로 나누는 숫자 발견{i}");
             }
         }
     }
