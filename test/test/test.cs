@@ -4,18 +4,23 @@ namespace CSharp
 {
     class Program
     {
-        //메소드   함수
-        static void AddOne(ref int number)
+        static void Divide(int a,int b, out int result1,out int result2)
         {
-            number++;
+            result1 = a / b;
+            result2 = a % b;
         }
-        
+
         static void Main(string[] args)
         {
-            //복사(짭퉁)    참조(진퉁)
-            int a = 0;
-            Program.AddOne(ref a);
-            Console.WriteLine($"결과는 {a}");
+            int num1 = 10;
+            int num2 = 3;
+
+            int result1;
+            int result2;
+            Divide(10,3,out result1,out num2);
+
+            Console.WriteLine(result1);
+            Console.WriteLine(result2);
         }
     }
 }
