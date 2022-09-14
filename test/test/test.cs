@@ -4,22 +4,22 @@ namespace CSharp
 {
     class Program
     {
-        static void Divide(int a, int b, out int result1, out int result2)
+        static int Add(int a, int b)
         {
-            result1 = a / b;
-            result2 = a % b;
+            Console.WriteLine("Add int 호출");
+            return a + b;
+        }
+
+        static float Add(float a,float b)
+        {
+            Console.WriteLine("Add float 호출");
+            return a + b;
         }
         static void Main(string[] args)
         {
-            int num1 = 10;
-            int num2 = 3;
-            int result1;
-            int result2;
-            
-            Divide(10,3,out result1,out result2);
-
-            Console.WriteLine(result1);
-            Console.WriteLine(result2);
+            int ret = Program.Add(2, 3);
+            float ret2=Program.Add(2.0f, 3.0f);
+            //Console.WriteLine(ret);
         }
     }
 }
