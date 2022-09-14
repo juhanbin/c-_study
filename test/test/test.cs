@@ -4,22 +4,16 @@ namespace CSharp
 {
     class Program
     {
-        static int Add(int a, int b)
+        static int Factorial(int n)
         {
-            Console.WriteLine("Add int 호출");
-            return a + b;
-        }
-
-        static float Add(float a,float b)
-        {
-            Console.WriteLine("Add float 호출");
-            return a + b;
+            if (n <= 1)
+                return 1;
+            return n * Factorial(n - 1);
         }
         static void Main(string[] args)
         {
-            int ret = Program.Add(2, 3);
-            float ret2=Program.Add(2.0f, 3.0f);
-            //Console.WriteLine(ret);
+            int ret = Factorial(5);
+            Console.WriteLine(ret);
         }
     }
 }
