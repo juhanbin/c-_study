@@ -4,15 +4,14 @@ namespace CSharp
 {
     class Program
     {
-        static int Factorial(int n)
+        static int Add(int a, int b)
         {
-            if (n <= 1)
-                return 1;
-            return n * Factorial(n - 1);
+            int ret = a + b;
+            return ret;
         }
         static void Main(string[] args)
         {
-            int ret = Factorial(5);
+            int ret=Program.Add(10, 20);
             Console.WriteLine(ret);
         }
     }
