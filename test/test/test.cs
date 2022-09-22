@@ -13,11 +13,24 @@ namespace CSharp
             Mage=3
         }
 
+        enum MonsterType
+        {
+            None=0,
+            Slime=1,
+            Orc=2,
+            Skeleton=3
+        }
+
+        struct Monster
+        {
+            public int hp;
+            public int attack;
+        }
+
         struct Player
         {
             public int hp;
             public int attack;
-            public ClassType type;
         }
 
         static ClassType ChooseClass()
@@ -45,28 +58,84 @@ namespace CSharp
             return choice;
         }
 
-        static void CreatPlayer(ClassType choice, out int hp, out int attack)
+        static void CreatPlayer(ClassType choice, out Player player)
         {
-            hp = 0;
-            attack = 0;
             switch (choice)
             {
                 case ClassType.Knight:
-                    hp = 100;
-                    attack = 10;
+                    player.hp = 100;
+                    player.attack = 10;
                     break;
                 case ClassType.Archer:
-                    hp = 75;
-                    attack = 12;
+                    player.hp = 75;
+                    player.attack = 12;
                     break;
                 case ClassType.Mage:
-                    hp = 50;
-                    attack = 15;
+                    player.hp = 50;
+                    player.attack = 15;
                     break;
                 default:
-                    hp = 0;
-                    attack = 0;
+                    player.hp = 0;
+                    player.attack = 0;
                     break;
+            }
+        }
+
+        static void CreateRandomMonster(out Monster monster)
+        {
+            Random rand = new Random();
+            int randMonster = rand.Next(1, 4);
+            switch (randMonster)
+            {
+                case (int)MonsterType.Slime:
+                    Console.WriteLine("슬라임이 스폰되었습니다");
+                    monster.hp = 20;
+                    monster.attack = 4;
+                    break;
+                case (int)MonsterType.Orc:
+                    Console.WriteLine("오크이 스폰되었습니다");
+                    monster.hp = 40;
+                    monster.attack = 4;
+                    break;
+                case (int)MonsterType.Skeleton:
+                    Console.WriteLine("스켈레톤이 스폰되었습니다");
+                    monster.hp = 30;
+                    monster.attack = 3;
+                    break;
+                default:
+                    monster.hp = 0;
+                    monster.attack = 0;
+                    break;
+            }
+        }
+
+        static void EnterField()
+        {
+            Console.WriteLine("필드에 접속했습니다");
+
+            Monster monster;
+            CreateRandomMonster(out monster);
+
+            Console.WriteLine("[1] 전투모드로 돌입");
+            Console.WriteLine("[2] 일정확률로 마을로 도망");
+        }
+        static void EnterGame()
+        {
+            while (true)
+            {
+                Console.WriteLine("마을에 접속했습니다");
+                Console.WriteLine("[1] 필드로 간다");
+                Console.WriteLine("[2] 로비로 돌아가기");
+
+                string input = Console.ReadLine();
+                if (input == "1")
+                {
+                    EnterField();
+                }
+                else if (input == "2")
+                {
+                    break;
+                }
             }
         }
         static void Main(string[] args)
@@ -78,11 +147,10 @@ namespace CSharp
                 if (choice != ClassType.None)
                 {
                     Player player;
-                    
-                    int hp;
-                    int attack;
-                    CreatPlayer(choice, out player.hp,out player.attack);
+                    CreatPlayer(choice,out player);
                     Console.WriteLine($"Hp{player.hp} Attack{player.attack}");
+
+                    EnterGame();
                 }
             }
         }
