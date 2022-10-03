@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xiv5XYNyr6imkdiAQmvTKGKXu9VD8L/MKmi9+lmfB+l2GBsDGnn8fzOszYsvz1OpiTwQUS0KgxgnGF7EVOvb7Q==",
+  "dgSpecHash": "r8oIiMv2R88DVkdcoJzM0PxPW6aTFRlpqeUuv1UXK3wmCfN88uWs/uUVRsPeAUI+V9UyqdNJ1ALR/N44/V9uBg==",
   "success": true,
-  "projectFilePath": "/Users/mac/C#_study/test/test/test.csproj",
+  "projectFilePath": "/Users/juhanbin/Documents/Github/c-_study/test/test/test.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

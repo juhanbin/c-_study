@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/mac/C#_study/test/test/test.csproj": {}
+    "/Users/juhanbin/Documents/Github/c-_study/test/test/test.csproj": {}
   },
   "projects": {
-    "/Users/mac/C#_study/test/test/test.csproj": {
+    "/Users/juhanbin/Documents/Github/c-_study/test/test/test.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/mac/C#_study/test/test/test.csproj",
+        "projectUniqueName": "/Users/juhanbin/Documents/Github/c-_study/test/test/test.csproj",
         "projectName": "test",
-        "projectPath": "/Users/mac/C#_study/test/test/test.csproj",
-        "packagesPath": "/Users/mac/.nuget/packages/",
-        "outputPath": "/Users/mac/C#_study/test/test/obj/",
+        "projectPath": "/Users/juhanbin/Documents/Github/c-_study/test/test/test.csproj",
+        "packagesPath": "/Users/juhanbin/.nuget/packages/",
+        "outputPath": "/Users/juhanbin/Documents/Github/c-_study/test/test/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/mac/.nuget/NuGet/NuGet.Config"
+          "/Users/juhanbin/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/x64/sdk/6.0.400/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/Users/juhanbin/.dotnet/sdk/6.0.400/RuntimeIdentifierGraph.json"
         }
       }
     }
