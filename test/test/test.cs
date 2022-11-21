@@ -4,41 +4,38 @@ using System.Runtime.InteropServices;
 
 namespace CSharp
 {
-    class Player // 부모 / 기반
+    //객체(OOP)
+        
+    //Knight
+    //속성:hp,attack
+    //기능:Move,Attack,Die
+
+    class Knight
     {
-        static public int counter = 1;//오로지 1개만 존재
-        public int id;
         public int hp;
         public int attack;
 
         public void Move()
         {
-            Console.WriteLine("Player Move");
+            Console.WriteLine("Knight Move");
         }
-
         public void Attack()
         {
-            Console.WriteLine("Player Attack");
+            Console.WriteLine("Knight Attack");
         }
     }
-    class Mage : Player
-    {
-    }
-    class Archer : Player
-    {
-    }
-    class Knight : Player // 자식 / 파생
-    {
-        
-    }
+    
     class Program
     {
         static void Main(string[] args)
         {
-            Knight knight = new Knight();
+            Knight knight = new Knight();   //객체 생성
+            
+            knight.hp=100;
+            knight.attack = 10;
+            
             knight.Move();
+            knight.Attack();
         }
     }
 }
-//스텍
-//힙
