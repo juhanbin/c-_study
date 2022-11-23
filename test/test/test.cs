@@ -75,3 +75,10 @@ namespace CSharp
         }
     }
 }
+//stack
+//함수 종료시 공간 삭제
+
+//heap
+//delete하지 않으면 계속 해서 heap영역에 유지
+//c#의 경우 참조하지 않으면 자동으로 삭재
+//ref의 경우 꼭 heap영역에 있는게 아니라 stack영역에 있을수 있음
