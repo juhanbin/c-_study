@@ -4,28 +4,61 @@ using System.Runtime.InteropServices;
 
 namespace CSharp
 {
-    //객체(OOP)
+    //객체(OOP) - 은닉성/상속성/다형성
+
+    class Player    //부모 클래스 or 기반 클래스
+    {
+        static public int counter = 1;    //오로지 1개만 존재
+        public int id;
+        public int hp;
+        public int attack;
         
+        public Player()
+        {
+            Console.WriteLine("player 생성자 호출");
+        }
+        public Player(int hp)
+        {
+            this.hp = hp;
+            Console.WriteLine("player hp 생성자 호출");
+        }
+    }
+    class Mage : Player
+    {
+        
+    }
+
+    class Archer : Player
+    {
+        
+    }
     //Knight
     //속성:hp,attack
     //기능:Move,Attack,Die
 
     //참조
-    class Knight
+    class Knight : Player   //자식 or 파생
     {
         //필드
+        /*
         static public int counter = 1;    //오로지 1개만 존재
 
         public int id;
         public int hp;
         public int attack;
-        /*
         static public void Test()   //static O 붕어빵틀에 종속 / static X 인스턴스에 종속
         {
             counter++;
         }
         */
-
+        int c;
+        public Knight() : base(100)
+        {
+            this.c = 10;
+            base.hp = 100;
+            Console.WriteLine("Knight 생성자 호출");
+        }
+        /*
         static public Knight CreateKnight()
         {
             Knight knight = new Knight();
@@ -33,7 +66,6 @@ namespace CSharp
             knight.attack = 1;
             return knight;
         }
-
         public Knight()
         {
             id = counter;
@@ -43,6 +75,7 @@ namespace CSharp
             attack = 10;
             Console.WriteLine("생성자 호출");
         }
+        
         public Knight(int hp) : this()  //  : this() = 빈 생성자 호출후 인자 대입
         {
             this.hp = hp;
@@ -53,7 +86,6 @@ namespace CSharp
             this.hp = hp;
             Console.WriteLine("int,int  생성자 호출");
         }
-
         public Knight Clone()
         {
             Knight knight = new Knight();
@@ -61,26 +93,28 @@ namespace CSharp
             knight.attack = attack;
             return knight;
         }
-        
+        */
         public void Move()
         {
-            Console.WriteLine("Knight Move");
+            Console.WriteLine("Player Move");
         }
         public void Attack()
         {
-            Console.WriteLine("Knight Attack");
+            Console.WriteLine("Player Attack");
         }
     }
 
     //복사
+    /*
     struct Mage
     {
         public int hp;
         public int attack;
     }
-    
+    */
     class Program
     {
+        /*
         static void KillMage(Mage mage)
         {
             mage.hp = 0;
@@ -89,6 +123,7 @@ namespace CSharp
         {
             knight.hp = 0;
         }
+        */
         static void Main(string[] args)
         {
             /*
@@ -113,7 +148,7 @@ namespace CSharp
             Knight knight2 = knight.Clone();
             knight2.hp = 0;
             */
-            Knight knight = Knight.CreateKnight();  //static O
+            Knight knight = new Knight();  //static O
             knight.Move();  //static X
             /*
             Console.WriteLine();
