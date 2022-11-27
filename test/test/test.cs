@@ -37,10 +37,11 @@ namespace CSharp
     //기능:Move,Attack,Die
 
     //참조
+    /*
     class Knight : Player   //자식 or 파생
     {
         //필드
-        /*
+        
         static public int counter = 1;    //오로지 1개만 존재
 
         public int id;
@@ -50,7 +51,7 @@ namespace CSharp
         {
             counter++;
         }
-        */
+        
         int c;
         public Knight() : base(100)
         {
@@ -58,7 +59,7 @@ namespace CSharp
             base.hp = 100;
             Console.WriteLine("Knight 생성자 호출");
         }
-        /*
+        
         static public Knight CreateKnight()
         {
             Knight knight = new Knight();
@@ -93,7 +94,7 @@ namespace CSharp
             knight.attack = attack;
             return knight;
         }
-        */
+        
         public void Move()
         {
             Console.WriteLine("Player Move");
@@ -103,7 +104,21 @@ namespace CSharp
             Console.WriteLine("Player Attack");
         }
     }
+    */
+    class Knight
+    {
+        //접근 한정자
+        //public(모든곳에서 사용가능)    protected(자식,부모관계에게 사용가능)   private(같은 클래스에서 사용가능)
+        protected int hp;
 
+        class SuperKnight:Knight
+        {
+            void Test()
+            {
+                hp = 10;
+            }
+        }
+    }
     //복사
     /*
     struct Mage
@@ -149,7 +164,8 @@ namespace CSharp
             knight2.hp = 0;
             */
             Knight knight = new Knight();  //static O
-            knight.Move();  //static X
+            
+            //knight.Move();  //static X
             /*
             Console.WriteLine();
             Random rand = new Random();     //static O
