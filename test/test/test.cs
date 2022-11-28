@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace CSharp
 {
+    /*
     //객체(OOP) - 은닉성/상속성/다형성
 
     class Player    //부모 클래스 or 기반 클래스
@@ -37,7 +38,7 @@ namespace CSharp
     //기능:Move,Attack,Die
 
     //참조
-    /*
+    
     class Knight : Player   //자식 or 파생
     {
         //필드
@@ -104,7 +105,7 @@ namespace CSharp
             Console.WriteLine("Player Attack");
         }
     }
-    */
+    
     class Knight
     {
         //접근 한정자
@@ -120,13 +121,26 @@ namespace CSharp
         }
     }
     //복사
-    /*
+    
     struct Mage
     {
         public int hp;
         public int attack;
     }
     */
+    class Player
+    {
+        protected int hp;
+        protected int attack;
+    }
+    class Knight : Player
+    {
+        
+    }
+    class Mage : Player
+    {
+        public int mp;
+    }
     class Program
     {
         /*
@@ -162,15 +176,17 @@ namespace CSharp
 
             Knight knight2 = knight.Clone();
             knight2.hp = 0;
-            */
+            
             Knight knight = new Knight();  //static O
             
             //knight.Move();  //static X
-            /*
+            
             Console.WriteLine();
             Random rand = new Random();     //static O
             rand.Next(0,2);     //static X
             */
+            Knight knight = new Knight();
+            Mage mage = new Mage();
         }
     }
 }
