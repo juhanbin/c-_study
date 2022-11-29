@@ -153,6 +153,10 @@ namespace CSharp
             knight.hp = 0;
         }
         */
+        static void EnterGame(Player player)
+        {
+            
+        }
         static void Main(string[] args)
         {
             /*
@@ -187,6 +191,13 @@ namespace CSharp
             */
             Knight knight = new Knight();
             Mage mage = new Mage();
+            //Mage 타입 ->Player 타입
+            //Player 타입 -> Mage 타입 ?
+            Player magePlayer = mage;
+            Mage mage2 = (Mage)magePlayer;
+            
+            EnterGame(knight);
+            EnterGame(mage);
         }
     }
 }
